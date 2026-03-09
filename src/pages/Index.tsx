@@ -131,13 +131,12 @@ const Index = () => {
       nome: data.name,
       email: data.email,
       whatsapp: data.phone,
-      empresa: data.lawFirm, // Campo "Nome da empresa"
-      escritorio: answers[4] || "", // P5: Atua como PJ (CNPJ)?
-      area: answers[1] || "", // P2: Principal desafio logístico
-      tamanho: answers[0] || "", // P1: Exportador/Importador
-      metaMensal: answers[5] || "", // P6: Valor movimentado por mês
-      investimento: answers[2] || "", // P3: Volume ou frequência
-      prazo: answers[3] || "", // P4: Recorrente ou pontual
+      escritorio: data.lawFirm, // O formulário pede "Empresa", mas vai pra "Escritório"
+      area: answers[1] || "", // P2
+      tamanho: answers[0] || "", // P1
+      metaMensal: answers[5] || "", // P6
+      investimento: answers[2] || "", // P3
+      prazo: answers[3] || "", // P4
       score: score,
       status: "new",
       notas: "",
