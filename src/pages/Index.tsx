@@ -129,14 +129,16 @@ const Index = () => {
     const leadEntry = {
       data: new Date().toLocaleString("pt-BR"),
       nome: data.name,
+      empresa: data.lawFirm,
       email: data.email,
       whatsapp: data.phone,
-      escritorio: data.lawFirm, // O formulário pede "Empresa", mas vai pra "Escritório"
-      area: answers[1] || "", // P2
-      tamanho: answers[0] || "", // P1
-      metaMensal: answers[5] || "", // P6
-      investimento: answers[2] || "", // P3
-      prazo: answers[3] || "", // P4
+      cidadeEstado: data.instagram || "",
+      importacaoExportacao: answers[0] || "",
+      desafioLogistico: answers[1] || "",
+      frequencia: answers[2] || "",
+      recorrencia: answers[3] || "",
+      cnpj: answers[4] || "",
+      valorMovimentado: answers[5] || "",
       score: score,
       status: "new",
       notas: "",
