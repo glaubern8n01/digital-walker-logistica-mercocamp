@@ -127,19 +127,20 @@ const Index = () => {
     const score = calculateScore(answers);
 
     const leadEntry = {
-      name: data.name,
-      company: data.lawFirm, // Reusing field for company
+      data: new Date().toLocaleString("pt-BR"),
+      nome: data.name,
       email: data.email,
-      phone: data.phone,
-      location: data.instagram || "", // Reusing field for city/state
-      is_exporter_importer: answers[0] || "",
-      main_challenge: answers[1] || "",
-      frequency: answers[2] || "",
-      is_recurrent: answers[3] || "",
-      is_pj: answers[4] || "",
-      monthly_volume: answers[5] || "",
-      lead_score: score,
-      timestamp: new Date().toLocaleString("pt-BR"),
+      whatsapp: data.phone,
+      empresa: data.lawFirm, // Campo "Nome da empresa"
+      escritorio: answers[4] || "", // P5: Atua como PJ (CNPJ)?
+      area: answers[1] || "", // P2: Principal desafio logístico
+      tamanho: answers[0] || "", // P1: Exportador/Importador
+      metaMensal: answers[5] || "", // P6: Valor movimentado por mês
+      investimento: answers[2] || "", // P3: Volume ou frequência
+      prazo: answers[3] || "", // P4: Recorrente ou pontual
+      score: score,
+      status: "new",
+      notas: "",
     };
 
     // Send to Google Sheets
